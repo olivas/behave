@@ -992,8 +992,10 @@ BOOST_AUTO_TEST_SUITE_END()  // End BehaveRunTestSuite
 BOOST_AUTO_TEST_CASE(waitInDebug)
 {
     BOOST_CHECK_EQUAL(0, 0);
+#if defined _WIN64 || defined _WIN32
     // Make Visual Studio wait while in debug mode
     std::cout << "Press Enter to continue . . .";
     std::cin.get();
+#endif
 }
 #endif

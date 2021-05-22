@@ -108,6 +108,7 @@ ADD_EXECUTABLE(behave
     ${HEADERS})
 
 IF(TEST_BEHAVE)
+    enable_testing()
     SET(Boost_DEBUG ON) # get verbose info while trying to find Boost 
     SET(Boost_USE_STATIC_LIBS ON) # only find static libs
 
@@ -123,6 +124,7 @@ IF(TEST_BEHAVE)
             ${SOURCE}
             ${BOOST_TEST_SOURCE}
             ${HEADERS})
+	ADD_TEST(behave_test testBehave)
         TARGET_LINK_LIBRARIES(testBehave ${Boost_LIBRARIES})
     ENDIF()
 ENDIF()
