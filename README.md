@@ -23,3 +23,23 @@ Because compiler optimizations are turned off in coverage builds, it's recommend
 >        cmake -DCOVERAGE=ON <path_to_source>
 >        make 
 >        make coverage
+
+You should see output ending with something like:
+>        Running tests...
+>        Test project /home/olivas/behave/coverage_build
+>            Start 1: behave_test
+>        1/1 Test #1: behave_test ......................   Passed    0.02 sec
+>        
+>        100% tests passed, 0 tests failed out of 1
+>        
+>        Total Test time (real) =   0.02 sec
+>        ------------------------------------------------------------------------------
+>                                   GCC Code Coverage Report
+>        Directory: ../
+>        ------------------------------------------------------------------------------
+>        File                                       Lines    Exec  Cover   Missing
+>        ------------------------------------------------------------------------------
+>        ...
+>        ------------------------------------------------------------------------------
+>        TOTAL                                       6087    4160    68%
+>        ------------------------------------------------------------------------------
