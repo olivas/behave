@@ -1,4 +1,5 @@
 
+
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/src/behave)
 
 SET(SOURCE
@@ -68,9 +69,5 @@ SET(HEADERS
 SOURCE_GROUP("Behave Core Source Files" FILES ${SOURCE})
 SOURCE_GROUP("Behave Core Header Files" FILES ${HEADERS})
 
-ADD_EXECUTABLE(behave_client
-    ${SOURCE} 
-    src/behave/client.cpp 
-    ${HEADERS}
-    )
+ADD_LIBRARY(behave SHARED ${SOURCE})
 
