@@ -61,10 +61,9 @@
 #ifndef _CONTAINSIM_H_INCLUDED_
 #define _CONTAINSIM_H_INCLUDED_
 
-// Custom include files
-#include "Contain.h"
-#include "ContainForce.h"
-#include "ContainResource.h"
+#include <behave/Contain.hpp>
+#include <behave/ContainForce.hpp>
+#include <behave/ContainResource.hpp>
 
 namespace Sem
 {

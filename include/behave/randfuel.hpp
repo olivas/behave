@@ -51,9 +51,8 @@
 #ifndef RANDFUEL_H
 #define RANDFUEL_H
 
-// Custom include files
-#include "newext.h"
-#include "randthread.h"
+#include <behave/newext.hpp>
+#include <behave/randthread.hpp>
 
 //------------------------------------------------------------------------------
 /*! \typedef FuelType

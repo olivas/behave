@@ -32,9 +32,9 @@
 #ifndef SURFACEFIRE_H
 #define SURFACEFIRE_H
 
-#include "fireSize.h"
-#include "surfaceFireReactionIntensity.h"
-#include "surfaceFuelbedIntermediates.h"
+#include <behave/fireSize.hpp>
+#include <behave/surfaceFireReactionIntensity.hpp>
+#include <behave/surfaceFuelbedIntermediates.hpp>
 
 class SurfaceFire
 {

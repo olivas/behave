@@ -89,16 +89,15 @@
 //==============================================================================
 //==============================================================================
 
-// Local include files
-#include "Contain.h"
-#include "ContainForce.h"
-
-// Standard include files
 #include <math.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <memory.h>
 #include <iostream>
+
+#include <behave/Contain.hpp>
+#include <behave/ContainForce.hpp>
+
 using namespace std;
 
 /*! \def M_PI

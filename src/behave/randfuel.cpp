@@ -52,11 +52,12 @@
 #pragma warning( disable : 4706 )
 #endif
 
-#include "randfuel.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#include <behave/randfuel.hpp>
 
 //------------------------------------------------------------------------------
 

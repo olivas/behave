@@ -26,9 +26,9 @@
 *
 ******************************************************************************/
 
-#include "surfaceInputs.h"
-
 #include <cmath>
+
+#include <behave/surfaceInputs.hpp>
 
 // Default Ctor
 SurfaceInputs::SurfaceInputs()

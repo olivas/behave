@@ -33,7 +33,7 @@
 #ifndef SAFETY_H
 #define SAFETY_H
 
-#include "behaveUnits.h"
+#include <behave/behaveUnits.hpp>
 
 class Safety
 {

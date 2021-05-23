@@ -10,8 +10,6 @@
 #ifndef _CONTAINRESOURCE_H_INCLUDED_
 #define _CONTAINRESOURCE_H_INCLUDED_
 
-// Custom files
-//#include "ContainForce.h"
 
 namespace Sem
 {

@@ -5,8 +5,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "behaveRun.h"
-#include "fuelModelSet.h"
+
+#include <behave/behaveRun.hpp>
+#include <behave/fuelModelSet.hpp>
 
 // Define the error tolerance for double values
 static const double ERROR_TOLERANCE = 1e-06;

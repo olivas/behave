@@ -28,12 +28,12 @@
 *
 ******************************************************************************/
 
-#include "surfaceFuelbedIntermediates.h"
-
 #define _USE_MATH_DEFINES
 #include <cmath>
-#include "fuelModelSet.h"
-#include "surfaceInputs.h"
+
+#include <behave/surfaceFuelbedIntermediates.hpp>
+#include <behave/fuelModelSet.hpp>
+#include <behave/surfaceInputs.hpp>
 
 SurfaceFuelbedIntermediates::SurfaceFuelbedIntermediates()
 {

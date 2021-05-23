@@ -35,9 +35,9 @@
 #ifndef CROWN_H
 #define CROWN_H
 
-#include "behaveUnits.h"
-#include "crownInputs.h"
-#include "surface.h"
+#include <behave/behaveUnits.hpp>
+#include <behave/crownInputs.hpp>
+#include <behave/surface.hpp>
 
 class FuelModelSet;
 

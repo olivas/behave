@@ -25,7 +25,7 @@
 *
 ******************************************************************************/
 
-#include "crownInputs.h"
+#include <behave/crownInputs.hpp>
 
 CrownInputs::CrownInputs()
 {

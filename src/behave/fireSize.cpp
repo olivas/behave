@@ -1,6 +1,7 @@
-#include "fireSize.h"
 #define _USE_MATH_DEFINES
 #include <cmath>
+
+#include <behave/fireSize.hpp>
 
 FireSize::FireSize()
 {

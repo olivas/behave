@@ -29,9 +29,8 @@
 *
 ******************************************************************************/
 
-#include "fuelModelSet.h"
-
-#include "surfaceInputs.h"
+#include <behave/fuelModelSet.hpp>
+#include <behave/surfaceInputs.hpp>
 
 FuelModelSet::FuelModelSet()
 {

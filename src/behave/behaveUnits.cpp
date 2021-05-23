@@ -26,7 +26,7 @@
 ******************************************************************************/
 
 #include <cmath>
-#include "behaveUnits.h"
+#include <behave/behaveUnits.hpp>
 
 double LengthUnits::toBaseUnits(double value, LengthUnits::LengthUnitsEnum units)
 {

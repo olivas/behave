@@ -28,10 +28,10 @@
 *
 ******************************************************************************/
 
-#include "surfaceFireReactionIntensity.h"
-
 #include <cmath>
-#include "surfaceFuelbedIntermediates.h"
+
+#include <behave/surfaceFireReactionIntensity.hpp>
+#include <behave/surfaceFuelbedIntermediates.hpp>
 
 SurfaceFireReactionIntensity::SurfaceFireReactionIntensity()
 {

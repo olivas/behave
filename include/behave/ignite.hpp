@@ -1,8 +1,12 @@
 /******************************************************************************
 *
 * Project:  CodeBlocks
-* Purpose:  Class for handling the inputs required for Behave's Ignite module
+* Purpose:  Class for calculating the probability of ignition from a firebrand
+*           and from lightning
 * Author:   William Chatham <wchatham@fs.fed.us>
+* Credits:  Some of the code in the corresponding cpp file is, in part or in
+*           whole, from BehavePlus5 source originally authored by Collin D.
+*           Bevins and is used with or without modification.
 *
 *******************************************************************************
 *
@@ -25,75 +29,54 @@
 *
 ******************************************************************************/
 
-#ifndef IGNITEINPUTS_H
-#define IGNITEINPUTS_H
+#ifndef IGNITE_H
+#define IGNITE_H
 
-#include "behaveUnits.h"
+#include <behave/igniteInputs.hpp>
 
-struct IgnitionFuelBedType
-{
-    enum IgnitionFuelBedTypeEnum
-    {
-        PonderosaPineLitter = 0, //Ponderosa Pine Litter
-        PunkyWoodRottenChunky = 1, // Punky wood, rotten, chunky
-        PunkyWoodPowderDeep = 2, // Punky wood powder, deep (4.8 cm)
-        PunkWoodPowderShallow = 3, // Punk wood powder, shallow (2.4 cm)
-        LodgepolePineDuff = 4, // Lodgepole pine duff
-        DouglasFirDuff = 5, //  Douglas - fir duff
-        HighAltitudeMixed = 6, // High altitude mixed (mainly Engelmann spruce)
-        PeatMoss = 7  // Peat moss (commercial)
-    };
-};
-
-struct LightningCharge
-{
-    enum LightningChargeEnum
-    {
-        Negative = 0,
-        Positive = 1,
-        Unknown = 2
-    };
-};
-
-class IgniteInputs
+class Ignite
 {
 public:
-    IgniteInputs();
-    ~IgniteInputs();
-    
+    Ignite();
+    ~Ignite();
+
     void initializeMembers();
+
+    double calculateFirebrandIgnitionProbability(ProbabilityUnits::ProbabilityUnitsEnum desiredUnits);
+    double calculateLightningIgnitionProbability(ProbabilityUnits::ProbabilityUnitsEnum desiredUnits);
+
+    void setMoistureOneHour(double moistureOneHour, MoistureUnits::MoistureUnitsEnum moistureUnits);
+    void setMoistureHundredHour(double moistureHundredHour, MoistureUnits::MoistureUnitsEnum moistureUnits);
+    void setAirTemperature(double airTemperature, TemperatureUnits::TemperatureUnitsEnum temperatureUnites);
+    void setSunShade(double sunShade, CoverUnits::CoverUnitsEnum sunShadeUnits);
+    void setDuffDepth(double duffDepth, LengthUnits::LengthUnitsEnum lengthUnits);
+    void setIgnitionFuelBedType(IgnitionFuelBedType::IgnitionFuelBedTypeEnum fuelBedType_);
+    void setLightningChargeType(LightningCharge::LightningChargeEnum lightningChargeType);
 
     void updateIgniteInputs(double moistureOneHour, double moistureHundredHour, MoistureUnits::MoistureUnitsEnum moistureUnits,
         double airTemperature, TemperatureUnits::TemperatureUnitsEnum temperatureUnits, double sunShade, CoverUnits::CoverUnitsEnum sunShadeUnits,
         IgnitionFuelBedType::IgnitionFuelBedTypeEnum fuelBedType, double duffDepth, LengthUnits::LengthUnitsEnum duffDepthUnits,
         LightningCharge::LightningChargeEnum lightningChargeType);
 
-    void setMoistureHundredHour(double hundredHourMoisture, MoistureUnits::MoistureUnitsEnum moistureUnits);
-    void setMoistureOneHour(double moistureOneHour, MoistureUnits::MoistureUnitsEnum moistureUnits);
-    void setAirTemperature(double airTemperature, TemperatureUnits::TemperatureUnitsEnum temperatureUnits);
-    void setSunShade(double sunShade, CoverUnits::CoverUnitsEnum sunShadeUnits);
-    void setIgnitionFuelBedType(IgnitionFuelBedType::IgnitionFuelBedTypeEnum fuelBedType_);
-    void setDuffDepth(double duffDepth, LengthUnits::LengthUnitsEnum lengthUnits);
-  
-    void setLightningChargeType(LightningCharge::LightningChargeEnum lightningChargeType);
-
     double getAirTemperature(TemperatureUnits::TemperatureUnitsEnum desiredUnits);
+    double getFuelTemperature(TemperatureUnits::TemperatureUnitsEnum desiredUnits);
     double getMoistureOneHour(MoistureUnits::MoistureUnitsEnum desiredUnits);
     double getMoistureHundredHour(MoistureUnits::MoistureUnitsEnum desiredUnits);
     double getSunShade(CoverUnits::CoverUnitsEnum desiredUnits);
-    IgnitionFuelBedType::IgnitionFuelBedTypeEnum getIgnitionFuelBedType();
     double getDuffDepth(LengthUnits::LengthUnitsEnum desiredUnits);
+    IgnitionFuelBedType::IgnitionFuelBedTypeEnum getFuelBedType();
     LightningCharge::LightningChargeEnum getLightningChargeType();
-     
+
+    // isFuelDepthNeeded() can be used in applications to determine whether user input of fuel bed depth is 
+    // neccessary based on the current value of fuel bed used by the ignite module 
+    bool isFuelDepthNeeded();
+
 private:
-    double moistureOneHour_;
-    double moistureHundredHour_;
-    double airTemperature_;
-    double sunShade_;
-    IgnitionFuelBedType::IgnitionFuelBedTypeEnum fuelBedType_;
-    double duffDepth_;
- 
-    LightningCharge::LightningChargeEnum lightningChargeType_;
+    double calculateFuelTemperature();
+
+    IgniteInputs igniteInputs_;
+
+    double fuelTemperature_;
 };
 
-#endif // IGNITEINPUTS_H
+#endif  // IGNITE_H

@@ -1,4 +1,4 @@
-#include "igniteInputs.h"
+#include <behave/igniteInputs.hpp>
 
 IgniteInputs::IgniteInputs()
 {

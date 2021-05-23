@@ -28,9 +28,9 @@
 *
 ******************************************************************************/
 
-#include "palmettoGallberry.h"
-
 #include <cmath>
+
+#include <behave/palmettoGallberry.hpp>
 
 PalmettoGallberry::PalmettoGallberry()
 {

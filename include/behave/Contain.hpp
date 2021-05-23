@@ -62,8 +62,8 @@
 #define _CONTAIN_H_INCLUDED_
 
 // Custom include files
-#include "ContainForce.h"
-#include "ContainResource.h"
+#include <behave/ContainForce.hpp>
+#include <behave/ContainResource.hpp>
 
 namespace Sem
 {

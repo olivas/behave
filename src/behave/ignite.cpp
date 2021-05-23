@@ -29,10 +29,10 @@
 *
 ******************************************************************************/
 
-#include "ignite.h"
-
 #include <cmath>
-#include "igniteInputs.h"
+
+#include <behave/ignite.hpp>
+#include <behave/igniteInputs.hpp>
 
 Ignite::Ignite()
 {

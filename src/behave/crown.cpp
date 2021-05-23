@@ -28,11 +28,11 @@
 *
 ******************************************************************************/
 
-#include "crown.h"
-
 #include <cmath>
-#include "fuelModelSet.h"
-#include "windSpeedUtility.h"
+
+#include <behave/crown.hpp>
+#include <behave/fuelModelSet.hpp>
+#include <behave/windSpeedUtility.hpp>
 
 Crown::Crown(const FuelModelSet& fuelModelSet)
     : surfaceFuel_(fuelModelSet), crownFuel_(fuelModelSet)

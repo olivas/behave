@@ -32,7 +32,7 @@
 #ifndef SURFACETWOFUELMODELS_H
 #define SURFACETWOFUELMODELS_H
 
-#include "surfaceInputs.h"
+#include <behave/surfaceInputs.hpp>
 
 class SurfaceFuelbedIntermediates;
 class SurfaceFire;

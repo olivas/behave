@@ -1,5 +1,5 @@
 
-INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/src/behave)
+INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include)
 
 SET(SOURCE
     src/behave/behaveRun.cpp
@@ -34,43 +34,42 @@ SET(SOURCE
     src/behave/windSpeedUtility.cpp)
 
 SET(HEADERS
-    src/behave/behaveRun.h
-    src/behave/behaveUnits.h
-    src/behave/Contain.h
-    src/behave/ContainAdapter.h
-    src/behave/ContainForce.h
-    src/behave/ContainForceAdapter.h
-    src/behave/ContainResource.h
-    src/behave/ContainSim.h
-    src/behave/crown.h
-    src/behave/crownInputs.h
-    src/behave/fireSize.h
-    src/behave/fuelModelSet.h
-    src/behave/ignite.h
-    src/behave/igniteInputs.h
-    src/behave/newext.h
-    src/behave/palmettoGallberry.h
-    src/behave/randfuel.h
-    src/behave/randthread.h
-    src/behave/safety.h
-    src/behave/spot.h
-    src/behave/spotInputs.h
-    src/behave/surface.h
-    src/behave/surfaceFireReactionIntensity.h
-    src/behave/surfaceFuelbedIntermediates.h
-    src/behave/surfaceInputs.h
-    src/behave/surfaceFire.h
-    src/behave/surfaceTwoFuelModels.h
-    src/behave/westernAspen.h
-    src/behave/windAdjustmentFactor.h
-    src/behave/windSpeedUtility.h)
+    include/behave/behaveRun.hpp
+    include/behave/behaveUnits.hpp
+    include/behave/Contain.hpp
+    include/behave/ContainAdapter.hpp
+    include/behave/ContainForce.hpp
+    include/behave/ContainForceAdapter.hpp
+    include/behave/ContainResource.hpp
+    include/behave/ContainSim.hpp
+    include/behave/crown.hpp
+    include/behave/crownInputs.hpp
+    include/behave/fireSize.hpp
+    include/behave/fuelModelSet.hpp
+    include/behave/ignite.hpp
+    include/behave/igniteInputs.hpp
+    include/behave/newext.hpp
+    include/behave/palmettoGallberry.hpp
+    include/behave/randfuel.hpp
+    include/behave/randthread.hpp
+    include/behave/safety.hpp
+    include/behave/spot.hpp
+    include/behave/spotInputs.hpp
+    include/behave/surface.hpp
+    include/behave/surfaceFireReactionIntensity.hpp
+    include/behave/surfaceFuelbedIntermediates.hpp
+    include/behave/surfaceInputs.hpp
+    include/behave/surfaceFire.hpp
+    include/behave/surfaceTwoFuelModels.hpp
+    include/behave/westernAspen.hpp
+    include/behave/windAdjustmentFactor.hpp
+    include/behave/windSpeedUtility.hpp)
 
 SOURCE_GROUP("Behave Core Source Files" FILES ${SOURCE})
 SOURCE_GROUP("Behave Core Header Files" FILES ${HEADERS})
 
 ADD_EXECUTABLE(behave_client
     ${SOURCE} 
-    src/behave/client.cpp 
-    ${HEADERS}
+    src/behave/client.cpp
     )
 

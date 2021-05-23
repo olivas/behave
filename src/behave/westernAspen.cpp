@@ -28,9 +28,9 @@
 *
 ******************************************************************************/
 
-#include "westernAspen.h"
-
 #include <cmath>
+
+#include <behave/westernAspen.hpp>
 
 WesternAspen::WesternAspen()
 {

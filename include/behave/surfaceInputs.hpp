@@ -29,8 +29,7 @@
 #ifndef SURFACEINPUTS_H
 #define SURFACEINPUTS_H
 
-#include "behaveUnits.h"
-//#include "surfaceEnums.h"
+#include <behave/behaveUnits.hpp>
 
 struct AspenFireSeverity
 {

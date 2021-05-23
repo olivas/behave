@@ -1,4 +1,4 @@
-#include "safety.h"
+#include <behave/safety.hpp>
 
 #define _USE_MATH_DEFINES
 #include <cmath>

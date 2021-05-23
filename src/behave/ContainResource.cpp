@@ -9,8 +9,7 @@
 
 #include <stdio.h>
 
-// Local include files
-#include "Contain.h"
+#include <behave/Contain.hpp>
 
 /* Silence warnings that aren't our fault */
 #if defined(OMFFR) && defined(__GNUC__)

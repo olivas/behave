@@ -33,11 +33,11 @@
 #define SURFACE_H
 
 // The SURFACE module of BehavePlus
-#include "behaveUnits.h"
-#include "fireSize.h"
-#include "fuelModelSet.h"
-#include "surfaceFire.h"
-#include "surfaceInputs.h"
+#include <behave/behaveUnits.hpp>
+#include <behave/fireSize.hpp>
+#include <behave/fuelModelSet.hpp>
+#include <behave/surfaceFire.hpp>
+#include <behave/surfaceInputs.hpp>
 
 class Surface
 {

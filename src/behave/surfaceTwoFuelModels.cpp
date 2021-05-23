@@ -30,13 +30,12 @@
 *
 ******************************************************************************/
 
-#include "surfaceTwoFuelModels.h"
-
-#include "newext.h"
-#include "randfuel.h"
-#include "randthread.h"
-#include "surfaceFire.h"
-#include "surfaceFuelbedIntermediates.h"
+#include <behave/surfaceTwoFuelModels.hpp>
+#include <behave/newext.hpp>
+#include <behave/randfuel.hpp>
+#include <behave/randthread.hpp>
+#include <behave/surfaceFire.hpp>
+#include <behave/surfaceFuelbedIntermediates.hpp>
 
 SurfaceTwoFuelModels::SurfaceTwoFuelModels(SurfaceFire& surfaceFireSpread)
 {

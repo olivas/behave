@@ -29,10 +29,11 @@
 *
 ******************************************************************************/
 
-#include "spot.h"
 #define _USE_MATH_DEFINES
 #include <cstring>
 #include <cmath>
+
+#include <behave/spot.hpp>
 
 Spot::Spot()
 {

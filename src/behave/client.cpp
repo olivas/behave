@@ -2,10 +2,9 @@
 #include <iomanip>
 #include <iostream>
 
-#include "behaveRun.h"
-#include "fuelModelSet.h"
-
-#include "crown.h"
+#include <behave/behaveRun.hpp>
+#include <behave/fuelModelSet.hpp>
+#include <behave/crown.hpp>
 
 int main()
 {

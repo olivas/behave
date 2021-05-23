@@ -23,15 +23,15 @@
 
 // Local include files
 #include <iostream>
-#include "ContainSim.h"
-//include "Logger.h"
 
 // Standard include files
-
 #include <math.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+
+#include <behave/ContainSim.hpp>
+
 
 //------------------------------------------------------------------------------
 /*! \brief ContainSim custom constructor.

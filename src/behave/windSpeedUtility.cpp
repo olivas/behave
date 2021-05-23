@@ -28,7 +28,7 @@
 *
 ******************************************************************************/
 
-#include "windSpeedUtility.h"
+#include <behave/windSpeedUtility.hpp>
 
 WindSpeedUtility::WindSpeedUtility()
 {

@@ -29,15 +29,15 @@
 *
 ******************************************************************************/
 
-#include "surfaceFire.h"
 
 #define _USE_MATH_DEFINES
 #include <cmath>
 
-#include "fuelModelSet.h"
-#include "surfaceFuelbedIntermediates.h"
-#include "surfaceInputs.h"
-#include "windAdjustmentFactor.h"
+#include <behave/surfaceFire.hpp>
+#include <behave/fuelModelSet.hpp>
+#include <behave/surfaceFuelbedIntermediates.hpp>
+#include <behave/surfaceInputs.hpp>
+#include <behave/windAdjustmentFactor.hpp>
 
 SurfaceFire::SurfaceFire()
     : surfaceFireReactionIntensity_()

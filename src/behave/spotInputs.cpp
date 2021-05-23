@@ -25,7 +25,7 @@
 *
 ******************************************************************************/
 
-#include "spotInputs.h"
+#include <behave/spotInputs.hpp>
 
 SpotInputs::SpotInputs()
 {

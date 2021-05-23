@@ -28,7 +28,7 @@
 #ifndef FIRESIZE_H
 #define FIRESIZE_H
 
-#include "behaveUnits.h"
+#include <behave/behaveUnits.hpp>
 
 class FireSize
 {

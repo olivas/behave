@@ -1,6 +1,7 @@
-#include "ContainAdapter.h"
 #define _USE_MATH_DEFINES
 #include <math.h>
+
+#include <behave/ContainAdapter.hpp>
 
 ContainAdapter::ContainAdapter()
 {

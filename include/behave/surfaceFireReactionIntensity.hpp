@@ -1,7 +1,7 @@
 /******************************************************************************
 *
 * Project:  CodeBlocks
-* Purpose:  Class for calculating wind adjustment factor
+* Purpose:  Class for calculating surface fire reaction intensity
 * Author:   William Chatham <wchatham@fs.fed.us>
 * Credits:  Some of the code in the corresponding cpp file is, in part or in
 *           whole, from BehavePlus5 source originally authored by Collin D.
@@ -28,28 +28,36 @@
 *
 ******************************************************************************/
 
-#ifndef WINDADJUSTMENTFACTOR_H
-#define WINDADJUSTMENTFACTOR_H
+#ifndef SURFACEFIREREACTIONINTENSITY_H
+#define SURFACEFIREREACTIONINTENSITY_H
 
-#include "surfaceInputs.h"
+#include <behave/surfaceInputs.hpp>
 
-class WindAjustmentFactor
+class SurfaceFuelbedIntermediates;
+
+class SurfaceFireReactionIntensity
 {
 public:
-    WindAjustmentFactor();
-    double calculateWindAdjustmentFactorWithCrownRatio(double canopyCover, double canopyHeight,
-        double crownRatio, double fuelBedDepth);
-    double calculateWindAdjustmentFactorWithoutCrownRatio(double canopyCover, double canopyHeight,
-        double fuelBedDepth);
-    double getCanopyCrownFraction() const;
-    WindAdjustmentFactorShelterMethod::WindAdjustmentFactorShelterMethodEnum getWindAdjustmentFactorShelterMethod() const;
+    SurfaceFireReactionIntensity();
+    SurfaceFireReactionIntensity(const SurfaceFireReactionIntensity& rhs);
+    SurfaceFireReactionIntensity& operator=(const SurfaceFireReactionIntensity& rhs);
+    SurfaceFireReactionIntensity(const SurfaceFuelbedIntermediates& surfaceFuelbedIntermediates);
+
+    double calculateReactionIntensity();
+    void calculateEtaM();
+    void calculateEtaS();
+    double getReactionIntensity(HeatSourceAndReactionIntensityUnits::HeatSourceAndReactionIntensityUnitsEnum reactiontionIntensityUnits) const;
 
 private:
-    void calculateWindAdjustmentFactorShelterMethod(const double canopyCover, const double canopyHeight, const double fuelbedDepth);
-    void applyLogProfile(const double canopyCover, const double canopyHeight, const double fuelbedDepth);
-    double	windAdjustmentFactor_;
-    double	canopyCrownFraction_;
-    WindAdjustmentFactorShelterMethod::WindAdjustmentFactorShelterMethodEnum windAdjustmentFactorShelterMethod_;
+    void memberwiseCopyAssignment(const SurfaceFireReactionIntensity& rhs);
+
+    double etaM_[SurfaceInputs::FuelConstants::MAX_LIFE_STATES];                            // Moisture damping coefficient for  i-th categort (dead/live)
+    double etaS_[SurfaceInputs::FuelConstants::MAX_LIFE_STATES];                            // Mineral(silica) damping coefficient for i - th categort(dead / live)
+    double reactionIntensityForLifeState_[SurfaceInputs::FuelConstants::MAX_LIFE_STATES];   // Reaction intensity for i-th category (dead/live)
+    double reactionIntensity_;                                                              // Reaction Intensity, Rothermel 1972, equation 27 (Btu/ft2/min)
+
+    const SurfaceFuelbedIntermediates* surfaceFuelbedIntermediates_;
+
 };
 
-#endif // WINDADJUSTMENTFACTOR_H
+#endif // SURFACEFIREREACTIONINTENSITY_H

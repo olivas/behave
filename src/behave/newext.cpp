@@ -47,11 +47,11 @@
  *  - randthread.cpp
  *  - randthread.h
  */
-
-#include "newext.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#include <behave/newext.hpp>
 
 //------------------------------------------------------------------------------
 /*! \brief Extension default constructor.

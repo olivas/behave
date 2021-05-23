@@ -8,10 +8,10 @@
 #ifndef _CONTAINFORCE_H_INCLUDED_
 #define _CONTAINFORCE_H_INCLUDED_
 
-// Custom include files
-#include "Contain.h"
-#include "ContainResource.h"
 #include <cstring>
+
+#include <behave/Contain.hpp>
+#include <behave/ContainResource.hpp>
 
 namespace Sem
 {

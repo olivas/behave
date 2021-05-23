@@ -28,7 +28,7 @@
 #ifndef CROWNINPUTS_H
 #define CROWNINPUTS_H
 
-#include "behaveUnits.h"
+#include <behave/behaveUnits.hpp>
 
 class CrownInputs
 {

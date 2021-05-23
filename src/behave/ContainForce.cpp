@@ -6,8 +6,8 @@
  */
 
 // Local include files
-#include "ContainSim.h"         // for checkmem()
-#include "ContainForce.h"
+#include <behave/ContainSim.hpp>         // for checkmem()
+#include <behave/ContainForce.hpp>
 #include <math.h>
 
 /* Silence warnings that aren't our fault */

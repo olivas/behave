@@ -32,9 +32,10 @@
 #ifndef FUELMODELSET_H
 #define FUELMODELSET_H
 
-#include "behaveUnits.h"
 #include <string>
 #include <vector>
+
+#include <behave/behaveUnits.hpp>
 
 // TODO: Add in a std::map to map fuel codes to the respective fuel model number in FuelModelArray -WMC 02/2017
 

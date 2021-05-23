@@ -47,14 +47,12 @@
  *  - randthread.h
  */
 
-// Custom include files
-#include "randthread.h"
-
-// Standard include files
 #include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+
+#include <behave/randthread.hpp>
 
 //------------------------------------------------------------------------------
 

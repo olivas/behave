@@ -32,7 +32,7 @@
 #ifndef SPOT_H
 #define SPOT_H
 
-#include "spotInputs.h"
+#include <behave/spotInputs.hpp>
 
 class Spot
 {

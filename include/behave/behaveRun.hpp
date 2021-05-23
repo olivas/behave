@@ -29,13 +29,13 @@
 #ifndef BEHAVERUN_H
 #define BEHAVERUN_H
 
-#include "behaveUnits.h"
-#include "ContainAdapter.h"
-#include "crown.h"
-#include "ignite.h"
-#include "safety.h"
-#include "spot.h"
-#include "surface.h"
+#include <behave/behaveUnits.hpp>
+#include <behave/ContainAdapter.hpp>
+#include <behave/crown.hpp>
+#include <behave/ignite.hpp>
+#include <behave/safety.hpp>
+#include <behave/spot.hpp>
+#include <behave/surface.hpp>
 
 class FuelModels;
 

@@ -51,8 +51,7 @@
 #ifndef NEWEXT_H
 #define NEWEXT_H
 
-// Custom include files
-#include "randfuel.h"
+#include <behave/randfuel.hpp>
 
 class RandFuel;
 

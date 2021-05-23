@@ -29,14 +29,13 @@
 #ifndef CONTAINADAPTER_H
 #define CONTAINADAPTER_H
 
-#include "Contain.h"
-#include "ContainSim.h"
-#include "ContainForceAdapter.h"
-
-#include "behaveUnits.h"
-#include "fireSize.h"
-
 #include <string>
+
+#include <behave/Contain.hpp>
+#include <behave/ContainSim.hpp>
+#include <behave/ContainForceAdapter.hpp>
+#include <behave/behaveUnits.hpp>
+#include <behave/fireSize.hpp>
 
 //------------------------------------------------------------------------------
 /*! \enum ContainTactic

@@ -26,9 +26,8 @@
 *
 ******************************************************************************/
 
-#include "behaveRun.h"
-
-#include "fuelModelSet.h"
+#include <behave/behaveRun.hpp>
+#include <behave/fuelModelSet.hpp>
 
 BehaveRun::BehaveRun(FuelModelSet& fuelModelSet)
     : surface(fuelModelSet),

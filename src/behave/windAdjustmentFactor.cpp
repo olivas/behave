@@ -30,7 +30,8 @@
 
 #define _USE_MATH_DEFINES
 #include <cmath>
-#include "windAdjustmentFactor.h"
+
+#include <behave/windAdjustmentFactor.hpp>
 
 WindAjustmentFactor::WindAjustmentFactor()
 {

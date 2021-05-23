@@ -33,7 +33,8 @@
 
 #include <string>
 #include <vector>
-#include "ContainResource.h"
+
+#include <behave/ContainResource.hpp>
 
 class ContainForceAdapter
 {

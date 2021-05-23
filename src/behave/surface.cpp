@@ -29,10 +29,9 @@
 *
 ******************************************************************************/
 
-#include "surface.h"
-
-#include "surfaceTwoFuelModels.h"
-#include "surfaceInputs.h"
+#include <behave/surface.hpp>
+#include <behave/surfaceTwoFuelModels.hpp>
+#include <behave/surfaceInputs.hpp>
 
 Surface::Surface(const FuelModelSet& fuelModelSet)
     : surfaceInputs_(),

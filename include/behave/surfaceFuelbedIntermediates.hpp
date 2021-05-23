@@ -31,9 +31,9 @@
 #ifndef SURFACEFUELBEDINTERMEDIATES_H
 #define SURFACEFUELBEDINTERMEDIATES_H
 
-#include "palmettoGallberry.h" 
-#include "westernAspen.h"
-#include "surfaceInputs.h"
+#include <behave/palmettoGallberry.hpp> 
+#include <behave/westernAspen.hpp>
+#include <behave/surfaceInputs.hpp>
 
 class FuelModelSet;
 class SurfaceInputs;

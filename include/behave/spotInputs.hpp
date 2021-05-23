@@ -28,7 +28,7 @@
 #ifndef SPOTINPUTS_H
 #define SPOTINPUTS_H
 
-#include "behaveUnits.h"
+#include <behave/behaveUnits.hpp>
 
 struct SpotTreeSpecies
 {
